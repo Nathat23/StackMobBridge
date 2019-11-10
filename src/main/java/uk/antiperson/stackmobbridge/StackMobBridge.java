@@ -14,6 +14,8 @@ public class StackMobBridge extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        getLogger().info("StackMobBridge by antiPerson.");
+        getLogger().info("Detecting StackMob...");
         stackMob = (StackMob) getServer().getPluginManager().getPlugin("StackMob");
         if (stackMob == null || !stackMob.isEnabled()) {
             getLogger().info("StackMob has not been found. Plugin will now disable!");
@@ -24,8 +26,10 @@ public class StackMobBridge extends JavaPlugin {
             getServer().getPluginManager().disablePlugin(this);
         }
         config = new MainConfig(this);
+        getLogger().info("Loading mob data from storage...");
         storageManager = new StorageManager(this);
         storageManager.onServerEnable();
+        getLogger().info("Registering events...");
         getServer().getPluginManager().registerEvents(new ChunkLoad(this), this);
     }
 

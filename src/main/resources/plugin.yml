@@ -1,0 +1,5 @@
+name: StackMobBridge
+main: uk.antiperson.stackmobbridge.StackMobBridge
+version: ${project.version}
+api-version: 1.14
+depend: [StackMob]

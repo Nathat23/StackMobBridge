@@ -1,0 +1,3 @@
+# StackMobBridge ${project.version}
+# Once installed, this plugin should not be removed.
+# Alternatively, you could load every chunk on the server, then remove it.
